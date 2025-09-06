@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us – Jewelence Academy</title>
+  <meta name="description" content="Learn about Jewelence Academy – our mission, instructors, and journey in Jewelry Designing education." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body{margin:0;font-family:'Inter',sans-serif;line-height:1.6;color:#111;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{border-bottom:1px solid rgba(0,0,0,0.08);position:sticky;top:0;background:#fff;z-index:99}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{font-weight:700;font-size:18px;color:#0b66ff}
+    .nav-links ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav-links a{padding:8px 10px;border-radius:8px;color:#555;font-weight:600}
+    .nav-links a:hover{background:rgba(11,102,255,0.08);color:#0b66ff}
+    .btn{padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block}
+    .btn-primary{background:#0b66ff;color:#fff}
+
+    section{padding:50px 0}
+    h1,h2,h3{margin:0 0 15px}
+    .lead{color:#555;font-size:18px;max-width:700px}
+
+    /* Mission */
+    .mission{text-align:center}
+
+    /* Instructors */
+    .instructors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(12,23,63,0.06);text-align:center}
+    .card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+    .card h4{margin:0}
+    .card p{font-size:14px;color:#555}
+
+    /* Timeline */
+    .timeline{border-left:3px solid #0b66ff;padding-left:20px;max-width:700px;margin:0 auto}
+    .timeline-item{margin-bottom:30px;position:relative}
+    .timeline-item::before{content:"";width:14px;height:14px;border-radius:50%;background:#0b66ff;position:absolute;left:-29px;top:4px}
+    .timeline-item h4{margin:0 0 6px}
+    .timeline-item p{margin:0;color:#555}
+
+    footer{border-top:1px solid rgba(0,0,0,0.06);padding:20px 0;text-align:center;font-size:14px;color:#555}
+
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.18);z-index:9999;display:flex;align-items:center;justify-content:center}
+    .whatsapp-float i{font-size:20px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Jewelence</a></div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" style="color:#0b66ff;font-weight:700">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mission">
+      <div class="container">
+        <h1>About Jewelence Academy</h1>
+        <p class="lead">At Jewelence, we believe that jewelry designing is not just a skill but an art form. Our mission is to empower aspiring designers with the technical expertise, creativity, and confidence to build successful careers in the jewelry industry.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Meet Our Instructors</h2>
+        <div class="instructors">
+          <div class="card">
+            <img src="assets/instructor1.jpg" alt="Instructor" onerror="this.style.display='none'" />
+            <h4>Souvik paul</h4>
+            <p>Founder & Lead Instructor with 10+ years of experience in CAD Jewelry Design.</p>
+          </div>
+          <div class="card">
+            <img src="assets/instructor2.jpg" alt="Instructor" onerror="this.style.display='none'" />
+            <h4>XYZ</h4>
+            <p>CAD & ZBrush Designer specializing in modern jewelry workflows and student mentorship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>2023 – The Beginning</h4>
+            <p>Jewelence Academy was founded with a vision to provide professional-level jewelry design training in regional languages.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2024 – Growing Community</h4>
+            <p>Over 150 students trained in CAD and ZBrush, building strong portfolios and industry-ready skills.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2025 – Expanding Horizons</h4>
+            <p>Launched advanced programs, webinars, and trader meets to connect creative designers and industry professionals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2025 Jewelence Academy. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/918910304286?text=Hello%20Jewelence,%20I%20want%20to%20know%20more%20about%20the%20academy" target="_blank" rel="noopener">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+</body>
+</html>
