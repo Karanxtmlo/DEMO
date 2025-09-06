@@ -1,242 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jewelence | Rhino CAD Jewellery Design Course</title>
-  <meta name="description" content="Learn Rhino CAD Jewellery Design with Jewelence. Online course covering diamond details, kolets, stone settings, rings, bangles, necklaces & more.">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelence – Jewelry Designing Academy</title>
 
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="Jewelence | Rhino CAD Jewellery Design Course">
-  <meta property="og:description" content="Crafting Future Designers – Join Jewelence and master Rhino CAD Jewellery Design online.">
-  <meta property="og:image" content="https://karanxtmlo.github.io/DEMO/logo.png">
-  <meta property="og:type" content="website">
+  <!-- SEO Meta -->
+  <meta name="description" content="Jewelence – A premium Jewelry Designing Academy. Learn CAD, ZBrush, and advanced jewelry design with expert guidance.">
+  <meta name="keywords" content="Jewelence, jewelry design, CAD jewelry, ZBrush jewelry, jewelry designing academy">
+  <meta name="author" content="Jewelence Academy">
+
+  <!-- Open Graph / Share Preview -->
+  <meta property="og:title" content="Jewelence – Jewelry Designing Academy">
+  <meta property="og:description" content="Master the art of jewelry designing with Jewelence. Learn CAD, ZBrush, and advanced design techniques.">
+  <meta property="og:image" content="logo.png"> <!-- Your logo -->
   <meta property="og:url" content="https://karanxtmlo.github.io/DEMO/">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png"> <!-- Your logo -->
+
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- Logo + Brand -->
-        <a href="#" class="flex items-center space-x-3">
-          <img src="logo.png" alt="Jewelence Logo" class="h-10 w-10">
-          <span class="text-xl font-bold text-blue-600">Jewelence</span>
-        </a>
-
-        <!-- CTA Button -->
-        <a href="https://wa.me/918910304286?text=Hi%20I%20am%20interested%20in%20the%20Rhino%20CAD%20Jewellery%20Design%20Course"
-           class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-          Enroll Now
-        </a>
-      </div>
-    </div>
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 text-center shadow-lg flex flex-col items-center">
+    <img src="logo.png" alt="Jewelence Logo" class="w-20 h-20 mb-2">
+    <h1 class="text-3xl font-bold">Jewelence</h1>
+    <p class="text-lg">Jewelry Designing Academy</p>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-blue-600 text-white py-20 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Rhino CAD Jewellery Design Course</h1>
-    <p class="text-lg md:text-xl mb-6">Crafting Future Designers – Learn professional jewellery CAD design, 100% online</p>
-    <a href="https://wa.me/918910304286?text=Hi%20I%20am%20interested%20in%20the%20Rhino%20CAD%20Jewellery%20Design%20Course"
-       class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
-      Join via WhatsApp
+  <section class="text-center py-16 px-6">
+    <h2 class="text-4xl font-bold mb-4">Learn Jewelry Designing with Experts</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-700">Join Jewelence and master CAD, ZBrush, and advanced design techniques. Get industry-ready with practical training and live projects.</p>
+    <a href="https://wa.me/918910304286?text=Hi%20I%20want%20to%20enroll%20in%20Jewelence"
+       class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition">
+       Enroll via WhatsApp
     </a>
   </section>
 
-  <!-- Course Details -->
-  <section class="max-w-5xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold text-center mb-10 text-blue-600">Course Curriculum</h2>
-    
-    <!-- Accordion -->
-    <div id="accordion" class="space-y-4">
-
-      <!-- Module 1 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          1. Introduction
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Overview of CAD</li>
-            <li>Scope and demand of 3D printing in jewellery</li>
-            <li>Introduction to basic 2D tools</li>
-            <li>2D curve creation</li>
-            <li>Basic stone shapes (11 standard shapes)</li>
+  <!-- Courses Section -->
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold text-center mb-8">Our Courses</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Course 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h4 class="text-xl font-bold mb-2">CAD Jewelry Design</h4>
+        <p class="text-gray-600 mb-4">Master 3D CAD tools to create precise jewelry models.</p>
+        <button onclick="toggleDetails('cad')" class="text-blue-600 font-semibold">View More</button>
+        <div id="cad" class="hidden mt-4 text-gray-700">
+          <ul class="list-disc list-inside">
+            <li>Basic to advanced CAD techniques</li>
+            <li>Industry project practice</li>
+            <li>Certification included</li>
           </ul>
         </div>
       </div>
 
-      <!-- Module 2 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          2. 2D Design & Modelling
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>2D Motif Design</li>
-            <li>Transform Menu Tools (Move, Scale, Rotate, etc.)</li>
+      <!-- Course 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h4 class="text-xl font-bold mb-2">ZBrush Jewelry Design</h4>
+        <p class="text-gray-600 mb-4">Sculpt artistic and creative jewelry using ZBrush.</p>
+        <button onclick="toggleDetails('zbrush')" class="text-blue-600 font-semibold">View More</button>
+        <div id="zbrush" class="hidden mt-4 text-gray-700">
+          <ul class="list-disc list-inside">
+            <li>Detailed sculpting lessons</li>
+            <li>Organic jewelry shapes</li>
+            <li>Portfolio development</li>
           </ul>
         </div>
       </div>
 
-      <!-- Module 3 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          3. 3D Modelling Basics
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Introduction to Surface Creation</li>
-            <li>Solid Object Modelling</li>
-            <li>Review Session</li>
+      <!-- Course 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h4 class="text-xl font-bold mb-2">Advanced Designing</h4>
+        <p class="text-gray-600 mb-4">Take your skills to the next level with advanced jewelry techniques.</p>
+        <button onclick="toggleDetails('advanced')" class="text-blue-600 font-semibold">View More</button>
+        <div id="advanced" class="hidden mt-4 text-gray-700">
+          <ul class="list-disc list-inside">
+            <li>Complex design projects</li>
+            <li>Industry-standard workflows</li>
+            <li>Expert guidance</li>
           </ul>
         </div>
       </div>
-
-      <!-- Module 4 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          4. Diamond & Stone Settings
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Diamond Anatomy (Girdle, Crown, Culet, etc.)</li>
-            <li>Single Diamond Kolet</li>
-            <li>Bone Kolet</li>
-            <li>Thaka Kolet (Step, Rotating, Gallery, Bezel, etc.)</li>
-            <li>Big Stone with Side Stone Kolets</li>
-            <li>Pressure Thaka Kolet</li>
-            <li>Prong Setting</li>
-            <li>Channel Setting</li>
-            <li>Flush / Gypsy Setting</li>
-            <li>Micro Prong Setting (Measurement)</li>
-            <li>Pota / Kundan Stone Setting</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Module 5 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          5. Earrings & Pendants
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Ear Tops</li>
-            <li>Tops & Bali</li>
-            <li>U Bali / J Bali / Round Bali</li>
-            <li>Buti</li>
-            <li>Jhumka</li>
-            <li>Small Pendants</li>
-            <li>Regular Pendants</li>
-            <li>Pendant Set / Mangalsutra</li>
-            <li>Pendant Review Session</li>
-            <li>Project Submission</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Module 6 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          6. Ring Design
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Anatomy of a Ring</li>
-            <li>Ring Shank Creation</li>
-            <li>Ladies Fancy Rings</li>
-            <li>Gents Rings</li>
-            <li>Ring Reviews</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Module 7 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          7. Bracelets & Bangles
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Fancy Bracelets</li>
-            <li>Chain Bracelets</li>
-            <li>Tickra Churi (Motif Bangle)</li>
-            <li>Bracelet & Bangle Reviews</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Module 8 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          8. Necklace Design
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Tanmaniya</li>
-            <li>Baby Necklace</li>
-            <li>Full Necklace Design</li>
-            <li>Review Sessions</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Module 9 -->
-      <div class="bg-white rounded-lg shadow">
-        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg text-blue-600 accordion-btn">
-          9. Final Project
-          <span>+</span>
-        </button>
-        <div class="px-6 pb-4 hidden">
-          <ul class="list-disc pl-5 text-gray-700">
-            <li>Final Project Submission (within 8 days of last session)</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center py-6">
-    <p class="font-semibold">© 2025 Jewelence – Crafting Future Designers</p>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/918910304286?text=Hi%20I%20am%20interested%20in%20the%20Rhino%20CAD%20Jewellery%20Design%20Course"
-     class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition"
-     target="_blank" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="h-6 w-6">
-      <path d="M20.52 3.48A11.85 11.85 0 0 0 12.01 0C5.38 0 0 5.38 0 12c0 2.11.55 4.18 1.61 6.01L0 24l6.17-1.62A11.97 11.97 0 0 0 12 24c6.63 0 12.01-5.38 12.01-12s-5.38-12-12.01-12zm-.13 17.36a9.93 9.93 0 0 1-8.38 4.64c-1.64 0-3.25-.41-4.7-1.19l-.34-.18-3.66.96.98-3.56-.22-.36a9.97 9.97 0 0 1-1.52-5.26c0-5.52 4.49-10.01 10.02-10.01 2.68 0 5.19 1.05 7.08 2.94a9.92 9.92 0 0 1 0 14.02z"/>
-      <path d="M17.45 14.54c-.29-.14-1.73-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.15-.17.2-.35.22-.64.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.43-1.73-1.6-2.02-.17-.29-.02-.45.13-.59.14-.14.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48 0 1.45 1.07 2.85 1.22 3.05.15.2 2.11 3.23 5.11 4.53.71.31 1.26.49 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.73-.71 1.98-1.39.25-.68.25-1.26.17-1.39-.07-.13-.27-.2-.57-.35z"/>
-    </svg>
+  <!-- Floating WhatsApp Chat Button -->
+  <a href="https://wa.me/918910304286?text=Hi%20I%20want%20to%20join%20Jewelence"
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    💬
   </a>
 
-  <!-- Accordion Script -->
-  <script>
-    document.querySelectorAll('.accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        content.classList.toggle('hidden');
-        btn.querySelector('span').textContent = content.classList.contains('hidden') ? '+' : '-';
-      });
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+    <p>© 2025 Jewelence Academy. All Rights Reserved.</p>
+  </footer>
 
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
