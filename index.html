@@ -1,111 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jewelence – Jewelry Designing Academy</title>
+  <meta name="description" content="Jewelence – Learn Jewelry Designing with Experts. CAD, ZBrush and Advanced designing courses. Enroll via WhatsApp." />
+  <!-- Google Font + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Jewelence – A premium Jewelry Designing Academy. Learn CAD, ZBrush, and advanced jewelry design with expert guidance.">
-  <meta name="keywords" content="Jewelence, jewelry design, CAD jewelry, ZBrush jewelry, jewelry designing academy">
-  <meta name="author" content="Jewelence Academy">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --primary: #0b66ff; /* blue */
+      --accent: #0b66ff;
+      --whatsapp: #25D366;
+      --radius: 12px;
+      --maxwidth: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    a{color:inherit;text-decoration:none}
 
-  <!-- Open Graph / Share Preview -->
-  <meta property="og:title" content="Jewelence – Jewelry Designing Academy">
-  <meta property="og:description" content="Master the art of jewelry designing with Jewelence. Learn CAD, ZBrush, and advanced design techniques.">
-  <meta property="og:image" content="logo.png"> <!-- Your logo -->
-  <meta property="og:url" content="https://karanxtmlo.github.io/DEMO/">
-  <meta name="twitter:card" content="summary_large_image">
+    /* Container */
+    .container{max-width:var(--maxwidth);margin:0 auto;padding:0 20px}
 
-  <!-- Favicon -->
-  <link rel="icon" href="logo.png" type="image/png"> <!-- Your logo -->
+    /* Header / Nav */
+    header.site-header{background:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);backdrop-filter:blur(2px);position:sticky;top:0;z-index:999;border-bottom:1px solid rgba(11,102,255,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:44px;width:auto;display:block;border-radius:8px}
+    .brand .title{font-weight:700;font-size:18px}
+    .brand .tagline{font-size:12px;color:var(--muted)}
 
-  <!-- TailwindCSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    .nav-links ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    .nav-links a{padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+    .nav-links a:hover{background:rgba(11,102,255,0.08);color:var(--primary)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-outline{border:1px solid rgba(11,102,255,0.12);color:var(--primary);background:transparent}
+
+    .nav-toggle{display:none;background:transparent;border:0;font-size:20px}
+
+    /* Hero */
+    .hero{padding:48px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero h1{font-size:34px;margin:0 0 10px}
+    .hero p.lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+
+    .card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(12,23,63,0.06);}
+    .quick-courses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .course-card{display:flex;flex-direction:column;gap:10px}
+    .course-card img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+    .course-card h4{margin:0}
+    .course-card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Section spacing */
+    section{padding:36px 0}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(0,0,0,0.06);padding:20px 0;color:var(--muted);font-size:14px}
+    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px}
+
+    /* Sticky whatsapp button */
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;background:var(--whatsapp);color:#fff;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.18);z-index:9999;display:flex;align-items:center;justify-content:center}
+    .whatsapp-float i{font-size:20px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr;}
+      .quick-courses{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+      .nav-toggle{display:inline-flex}
+      .nav.open .nav-links{display:block;position:absolute;left:0;right:0;top:68px;background:#fff;padding:16px;border-radius:0 0 12px 12px;box-shadow:0 12px 30px rgba(12,23,63,0.06)}
+      .nav-links ul{flex-direction:column;gap:8px}
+    }
+    @media (max-width:520px){
+      .quick-courses{grid-template-columns:1fr}
+      .brand img{height:38px}
+      .hero h1{font-size:28px}
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-  <!-- Header -->
-  <header class="bg-blue-600 text-white p-6 text-center shadow-lg flex flex-col items-center">
-    <img src="logo.png" alt="Jewelence Logo" class="w-20 h-20 mb-2">
-    <h1 class="text-3xl font-bold">Jewelence</h1>
-    <p class="text-lg">Jewelry Designing Academy</p>
+  <header class="site-header">
+    <div class="container nav" id="topnav">
+      <div class="brand">
+        <!-- Replace assets/logo.png with your logo file -->
+        <a href="index.html"><img src="assets/logo.png" alt="Jewelence logo" onerror="this.style.display='none'" /></a>
+        <div>
+          <div class="title">Jewelence</div>
+          <div class="tagline">Jewelry Designing Academy</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-primary" href="https://wa.me/918910304286?text=I%27m%20interested%20in%20Jewelence%20courses" target="_blank" rel="noopener">Enroll via WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-16 px-6">
-    <h2 class="text-4xl font-bold mb-4">Learn Jewelry Designing with Experts</h2>
-    <p class="max-w-2xl mx-auto text-lg text-gray-700">Join Jewelence and master CAD, ZBrush, and advanced design techniques. Get industry-ready with practical training and live projects.</p>
-    <a href="https://wa.me/918910304286?text=Hi%20I%20want%20to%20enroll%20in%20Jewelence"
-       class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition">
-       Enroll via WhatsApp
-    </a>
-  </section>
+  <main>
 
-  <!-- Courses Section -->
-  <section class="max-w-5xl mx-auto px-6 py-12">
-    <h3 class="text-2xl font-semibold text-center mb-8">Our Courses</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Course 1 -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
-        <h4 class="text-xl font-bold mb-2">CAD Jewelry Design</h4>
-        <p class="text-gray-600 mb-4">Master 3D CAD tools to create precise jewelry models.</p>
-        <button onclick="toggleDetails('cad')" class="text-blue-600 font-semibold">View More</button>
-        <div id="cad" class="hidden mt-4 text-gray-700">
-          <ul class="list-disc list-inside">
-            <li>Basic to advanced CAD techniques</li>
-            <li>Industry project practice</li>
-            <li>Certification included</li>
-          </ul>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Learn Jewelry Designing with Experts</h1>
+          <p class="lead">Practical, project-based courses in CAD, ZBrush and advanced jewelry design. Flexible schedules, lifetime support and portfolio feedback.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/918910304286?text=I%27m%20interested%20in%20Jewelence%20courses" target="_blank" rel="noopener">Enroll via WhatsApp</a>
+            <a class="btn btn-outline" href="courses.html">View Courses</a>
+          </div>
+
+          <div style="margin-top:18px;" class="card">
+            <strong>Why choose Jewelence?</strong>
+            <p style="margin:8px 0 0;color:var(--muted)">Hands-on projects, mentor support, and a focus on real-world CAD & ZBrush workflows used by professional jewelers.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin-top:0">Quick Courses</h3>
+            <div class="quick-courses">
+              <div class="course-card">
+                <img src="assets/course-cad.jpg" alt="CAD Jewelry" onerror="this.style.display='none'" />
+                <h4>CAD Jewelry Design</h4>
+                <p>Intro to Rhino/Matrix, basic modeling, rendering & print-ready exports.</p>
+                <a href="courses.html#cad">View More</a>
+              </div>
+
+              <div class="course-card">
+                <img src="assets/course-zbrush.jpg" alt="ZBrush Jewelry" onerror="this.style.display='none'" />
+                <h4>ZBrush Jewelry Design</h4>
+                <p>Sculpting, organic forms and high-detail texturing for jewelry pieces.</p>
+                <a href="courses.html#zbrush">View More</a>
+              </div>
+
+              <div class="course-card">
+                <img src="assets/course-advanced.jpg" alt="Advanced" onerror="this.style.display='none'" />
+                <h4>Advanced Designing</h4>
+                <p>Advanced techniques, client-ready workflows and portfolio building.</p>
+                <a href="courses.html#advanced">View More</a>
+              </div>
+
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Placeholder for more sections (Gallery preview / Testimonials teaser) -->
+    <section>
+      <div class="container">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+          <div style="flex:1;min-width:240px">
+            <h3 style="margin:0 0 8px">Student Work & Gallery</h3>
+            <p style="margin:0;color:var(--muted)">Preview of student projects. Head to the full gallery to see more.</p>
+          </div>
+          <div style="flex:0 0 auto">
+            <a class="btn btn-outline" href="gallery.html">Open Gallery</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Course 2 -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
-        <h4 class="text-xl font-bold mb-2">ZBrush Jewelry Design</h4>
-        <p class="text-gray-600 mb-4">Sculpt artistic and creative jewelry using ZBrush.</p>
-        <button onclick="toggleDetails('zbrush')" class="text-blue-600 font-semibold">View More</button>
-        <div id="zbrush" class="hidden mt-4 text-gray-700">
-          <ul class="list-disc list-inside">
-            <li>Detailed sculpting lessons</li>
-            <li>Organic jewelry shapes</li>
-            <li>Portfolio development</li>
-          </ul>
-        </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Jewelence</strong>
+        <div style="color:var(--muted)">Jewelry Designing Academy</div>
       </div>
-
-      <!-- Course 3 -->
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
-        <h4 class="text-xl font-bold mb-2">Advanced Designing</h4>
-        <p class="text-gray-600 mb-4">Take your skills to the next level with advanced jewelry techniques.</p>
-        <button onclick="toggleDetails('advanced')" class="text-blue-600 font-semibold">View More</button>
-        <div id="advanced" class="hidden mt-4 text-gray-700">
-          <ul class="list-disc list-inside">
-            <li>Complex design projects</li>
-            <li>Industry-standard workflows</li>
-            <li>Expert guidance</li>
-          </ul>
-        </div>
+      <div style="text-align:right">
+        <div style="color:var(--muted);">&copy; 2025 Jewelence. All rights reserved.</div>
+        <div style="margin-top:6px;color:var(--muted)">Made with ❤️ • <a href="contact.html">Contact</a></div>
       </div>
     </div>
-  </section>
-
-  <!-- Floating WhatsApp Chat Button -->
-  <a href="https://wa.me/918910304286?text=Hi%20I%20want%20to%20join%20Jewelence"
-     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
-    💬
-  </a>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center p-6 mt-12">
-    <p>© 2025 Jewelence Academy. All Rights Reserved.</p>
   </footer>
 
+  <!-- Sticky WhatsApp (replace number if needed) -->
+  <a class="whatsapp-float" href="https://wa.me/918910304286?text=Hello%20Jewelence,%20I%27m%20interested%20in%20courses" target="_blank" rel="noopener">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+
   <script>
-    function toggleDetails(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle('hidden');
-    }
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const topnav = document.getElementById('topnav');
+    navToggle && navToggle.addEventListener('click', () => {
+      topnav.classList.toggle('open');
+    });
+
+    // Close mobile nav when clicking a link
+    document.addEventListener('click', (e)=>{
+      if(!topnav.contains(e.target)){
+        topnav.classList.remove('open');
+      }
+    });
+
+    // Smooth scroll for in-page anchors (if later added)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth'});
+      });
+    });
   </script>
+
 </body>
 </html>
