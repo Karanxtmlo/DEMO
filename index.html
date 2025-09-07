@@ -5,85 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jewelence – Jewelry Designing Academy</title>
   <meta name="description" content="Jewelence – Learn Jewelry Designing with Experts. CAD, ZBrush and Advanced designing courses. Enroll via WhatsApp." />
-  <!-- Google Font + Font Awesome -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
 
-  <style>
-    :root{
-      --bg: #ffffff;
-      --muted: #6b7280;
-      --primary: #0b66ff; /* blue */
-      --accent: #0b66ff;
-      --whatsapp: #25D366;
-      --radius: 12px;
-      --maxwidth: 1100px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+<style>
+  :root{
+    --bg: #ffffff;
+    --muted: #6b7280;
+    --primary: #0b66ff; /* blue */
+    --accent: #0b66ff;
+    --whatsapp: #25D366;
+    --radius: 12px;
+    --maxwidth: 1100px;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+
+  /* Container */
+  .container{max-width:var(--maxwidth);margin:0 auto;padding:0 20px}
+
+  /* Header / Nav */
+  header.site-header{background:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);backdrop-filter:blur(2px);position:sticky;top:0;z-index:999;border-bottom:1px solid rgba(11,102,255,0.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:44px;width:auto;display:block;border-radius:8px}
+  .brand .title{font-weight:700;font-size:18px}
+  .brand .tagline{font-size:12px;color:var(--muted)}
+
+  .nav-links ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+  .nav-links a{padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+  .nav-links a:hover{background:rgba(11,102,255,0.08);color:var(--primary)}
+  .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-outline{border:1px solid rgba(11,102,255,0.12);color:var(--primary);background:transparent}
+
+  /* Toggle Button */
+  .nav-toggle {
+    display: none;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .nav-toggle:hover {
+    background: #084dcc;
+    transform: scale(1.05);
+  }
+  .nav-toggle .icon {
+    display: block;
+  }
+
+  /* Hero */
+  .hero{padding:48px 0 36px}
+  .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+  .hero h1{font-size:34px;margin:0 0 10px}
+  .hero p.lead{color:var(--muted);margin:0 0 18px}
+  .cta-row{display:flex;gap:12px;align-items:center}
+
+  .card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(12,23,63,0.06);}
+  .quick-courses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .course-card{display:flex;flex-direction:column;gap:10px}
+  .course-card img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+  .course-card h4{margin:0}
+  .course-card p{margin:0;color:var(--muted);font-size:14px}
+
+  /* Section spacing */
+  section{padding:36px 0}
+
+  /* Footer */
+  footer{border-top:1px solid rgba(0,0,0,0.06);padding:20px 0;color:var(--muted);font-size:14px}
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+  }
+
+  /* Sticky whatsapp button */
+  .whatsapp-float{position:fixed;right:18px;bottom:18px;background:var(--whatsapp);color:#fff;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.18);z-index:9999;display:flex;align-items:center;justify-content:center}
+  .whatsapp-float i{font-size:20px}
+
+  /* Responsive */
+  @media (max-width:900px){
+    .hero-grid {
+      grid-template-columns:1fr;
+      text-align:center;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
-    a{color:inherit;text-decoration:none}
-
-    /* Container */
-    .container{max-width:var(--maxwidth);margin:0 auto;padding:0 20px}
-
-    /* Header / Nav */
-    header.site-header{background:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);backdrop-filter:blur(2px);position:sticky;top:0;z-index:999;border-bottom:1px solid rgba(11,102,255,0.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:44px;width:auto;display:block;border-radius:8px}
-    .brand .title{font-weight:700;font-size:18px}
-    .brand .tagline{font-size:12px;color:var(--muted)}
-
-    .nav-links ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
-    .nav-links a{padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
-    .nav-links a:hover{background:rgba(11,102,255,0.08);color:var(--primary)}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700}
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-outline{border:1px solid rgba(11,102,255,0.12);color:var(--primary);background:transparent}
-
-    .nav-toggle{display:none;background:transparent;border:0;font-size:20px}
-
-    /* Hero */
-    .hero{padding:48px 0 36px}
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-    .hero h1{font-size:34px;margin:0 0 10px}
-    .hero p.lead{color:var(--muted);margin:0 0 18px}
-    .cta-row{display:flex;gap:12px;align-items:center}
-
-    .card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(12,23,63,0.06);}
-    .quick-courses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .course-card{display:flex;flex-direction:column;gap:10px}
-    .course-card img{width:100%;height:120px;object-fit:cover;border-radius:10px}
-    .course-card h4{margin:0}
-    .course-card p{margin:0;color:var(--muted);font-size:14px}
-
-    /* Section spacing */
-    section{padding:36px 0}
-
-    /* Footer */
-    footer{border-top:1px solid rgba(0,0,0,0.06);padding:20px 0;color:var(--muted);font-size:14px}
-    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px}
-
-    /* Sticky whatsapp button */
-    .whatsapp-float{position:fixed;right:18px;bottom:18px;background:var(--whatsapp);color:#fff;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(37,211,102,0.18);z-index:9999;display:flex;align-items:center;justify-content:center}
-    .whatsapp-float i{font-size:20px}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .hero-grid{grid-template-columns:1fr;}
-      .quick-courses{grid-template-columns:repeat(2,1fr)}
-      .nav-links{display:none}
-      .nav-toggle{display:inline-flex}
-      .nav.open .nav-links{display:block;position:absolute;left:0;right:0;top:68px;background:#fff;padding:16px;border-radius:0 0 12px 12px;box-shadow:0 12px 30px rgba(12,23,63,0.06)}
-      .nav-links ul{flex-direction:column;gap:8px}
+    .cta-row {
+      justify-content:center;
+      flex-wrap:wrap;
     }
-    @media (max-width:520px){
-      .quick-courses{grid-template-columns:1fr}
-      .brand img{height:38px}
-      .hero h1{font-size:28px}
+    .quick-courses {
+      grid-template-columns:repeat(2,1fr);
     }
-  </style>
+    .nav-links {
+      display:none;
+    }
+    .nav-toggle {
+      display:inline-flex;
+    }
+    .nav.open .nav-links {
+      display:block;
+      position:absolute;
+      left:0;
+      right:0;
+      top:68px;
+      background:#fff;
+      padding:16px;
+      border-radius:0 0 12px 12px;
+      box-shadow:0 12px 30px rgba(12,23,63,0.06);
+      animation:slideDown 0.3s ease;
+    }
+    .nav-links ul {
+      flex-direction:column;
+      gap:12px;
+    }
+  }
+
+  @media (max-width:520px){
+    .quick-courses {
+      grid-template-columns:1fr;
+    }
+    .brand img {
+      height:34px;
+    }
+    .hero h1 {
+      font-size:24px;
+    }
+    .footer-grid {
+      flex-direction:column;
+      text-align:center;
+    }
+  }
+
+  /* Small animation for nav dropdown */
+  @keyframes slideDown {
+    from {opacity:0; transform:translateY(-10px);}
+    to {opacity:1; transform:translateY(0);}
+  }
+</style>
 </head>
 <body>
 
@@ -98,7 +165,20 @@
         </div>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <!-- Hamburger Icon -->
+        <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <!-- Close Icon -->
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
 
       <nav class="nav-links" aria-label="Main navigation">
         <ul>
@@ -165,7 +245,7 @@
       </div>
     </section>
 
-    <!-- Placeholder for more sections (Gallery preview / Testimonials teaser) -->
+    <!-- Placeholder for more sections -->
     <section>
       <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
@@ -195,27 +275,35 @@
     </div>
   </footer>
 
-  <!-- Sticky WhatsApp (replace number if needed) -->
+  <!-- Sticky WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/918910304286?text=Hello%20Jewelence,%20I%27m%20interested%20in%20courses" target="_blank" rel="noopener">
     <i class="fa fa-whatsapp"></i>
   </a>
 
   <script>
-    // Mobile nav toggle
+    // Mobile nav toggle with icons
     const navToggle = document.getElementById('navToggle');
     const topnav = document.getElementById('topnav');
+    const iconMenu = navToggle.querySelector('.icon-menu');
+    const iconClose = navToggle.querySelector('.icon-close');
+
     navToggle && navToggle.addEventListener('click', () => {
       topnav.classList.toggle('open');
+      const isOpen = topnav.classList.contains('open');
+      iconMenu.style.display = isOpen ? 'none' : 'block';
+      iconClose.style.display = isOpen ? 'block' : 'none';
     });
 
-    // Close mobile nav when clicking a link
+    // Close mobile nav when clicking outside
     document.addEventListener('click', (e)=>{
       if(!topnav.contains(e.target)){
         topnav.classList.remove('open');
+        iconMenu.style.display = 'block';
+        iconClose.style.display = 'none';
       }
     });
 
-    // Smooth scroll for in-page anchors (if later added)
+    // Smooth scroll for in-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', function(e){
         e.preventDefault();
